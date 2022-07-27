@@ -1,5 +1,6 @@
-% SET UP
+# SET UP
 
+```bash
 ssh <username>@<clustername>.computecanada.ca
 
 cd /project/<accountname>/
@@ -19,11 +20,12 @@ python -m ipykernel install --user --name show_jobs_kernel
 
 echo -e '#!/bin/bash\nunset XDG_RUNTIME_DIR\njupyter notebook --ip $(hostname -f) --no-browser' > $VIRTUAL_ENV/bin/notebook.sh
 chmod u+x $VIRTUAL_ENV/bin/notebook.sh
+```
 
 
+# INTERACTIVE JOB
 
-% INTERACTIVE JOB
- 
+```bash 
 ssh <username>@<clustername>.computecanada.ca
 
 cd /project/<accountname>/show_jobs
@@ -48,16 +50,18 @@ salloc --time=3:0:0 --ntasks=1 --cpus-per-task=1 --mem-per-cpu=4G --account=<acc
     Or copy and paste one of these URLs:
         http://gra797.graham.sharcnet:8888/?token=ed60c54ebdbf877e86c69f3af3cb6bbb62ac8fc354a28f8f
      or http://127.0.0.1:8888/?token=ed60c54ebdbf877e86c69f3af3cb6bbb62ac8fc354a28f8f
+```
 
 
 
+# OPEN SSH TUNNEL
 
-% OPEN SSH TUNNEL
-
+```bash
 ssh -L 9999:gra797.graham.sharcnet:8888 jdesjard@graham.computecanada.ca
+```
 
+# NAVIGATE BROWSER TO NOTEBOOK
 
-% NAVIGATE BROWSER TO NOTEBOOK
-
+```bash
 http://localhost:9999/lab?token=ed60c54ebdbf877e86c69f3af3cb6bbb62ac8fc354a28f8f
-
+```
