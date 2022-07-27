@@ -4,7 +4,7 @@
 ssh <username>@<clustername>.computecanada.ca
 
 cd /project/<accountname>/
-git clone https:/github.com/jadesjardins/show_jobs.git
+git clone https://github.com/jadesjardins/show_jobs.git
 cd show_jobs
 
 module load StdEnv/2020
